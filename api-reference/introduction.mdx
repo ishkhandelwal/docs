@@ -7,26 +7,24 @@ description: 'ConnectifyAI CLI'
   Our CLI works in tandem with our frontend system. One can choose paths to run experiments, which can be configured using this library. Below lists the features we currently provided.
 </Note>
 
-## Welcome
+## Installation
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+<CodeGroup>
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
-
-## Authentication
-
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+```bash pip
+pip install connectifyai
 ```
+</CodeGroup>
+
+## Run Forward Pass
+
+<Note>
+  Upon choosing a path on our frontend website of a given graph, this can be placed as an argument in the CLI command below to run forward pass.
+</Note>
+
+<CodeGroup>
+
+```bash python
+connect dl <path-hash>
+```
+</CodeGroup>
